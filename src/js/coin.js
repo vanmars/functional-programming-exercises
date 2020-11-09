@@ -19,7 +19,6 @@ export const coinCounterRecursion = (num) => {
   };
 }
 
-
 export const coinCounterClosure1 = (num) => {
   const quarters =  Math.floor(num/25);
   const dimes = Math.floor((num - quarters*25)/10);

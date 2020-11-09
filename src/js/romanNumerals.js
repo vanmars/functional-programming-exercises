@@ -75,11 +75,12 @@ export const  getThousands = (num) => {
     return "M";
   } else if (num === 2){
     return "MM";
-  } else {
+  } else if (num === 3) {
     return "MMM";
   }
 }
 
+// Solves Problem with Recursion
 export const getRoman = (num) => {                   // 1234                234             34           4       0
   // Termination Case
   if (typeof (num) !== 'number') {
@@ -101,4 +102,20 @@ export const getRoman = (num) => {                   // 1234                234 
   } else if (arr.length === 1){
     return getOnes(workingDigit) + getRoman(0);             // "IV" + getRoman(0)
   }
+}
+
+// Solves Problem with Closure
+export const getRomanWithClosure = (num) => {             //1234                            123
+  if (typeof (num) === 'number') { 
+    const arr = num.toString().split("").reverse();          //['4','3','2','1']             ['3', '2', '1']
+    const ones = getOnes(parseInt(arr[0]));                  // getOnes(4) -> "IV"           getOnes(3) -> "III"
+    const tens = getTens(parseInt(arr[1])) || "";            // getTens(3) -> "XXX"          getTens(2) -> "XX"
+    const hundreds = getHundreds(parseInt(arr[2])) || "";    // getHundreds(2) -> "CC"       getHundreds(1) -> "C"
+    const thousands = getThousands(parseInt(arr[3])) || "";  // getThousands(1) -> "M"       ""
+    return function() {
+      return thousands.concat(hundreds).concat(tens).concat(ones);       // "MCCXXXIV"                   "CXXIII"
+    };
+  } else {
+    return "Please enter a number."
+  };
 }
