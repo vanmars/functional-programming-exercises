@@ -13,11 +13,11 @@ describe('coinCounterClosure1', () => {
   })
 })
 
-// describe('coinCounterClosure2', () => {
-//   test('should correctly return number of quarters, dimes, nickels, and pennies for change', () => {
-//     expect(coinCounterClosure2(92)("quarters")).toEqual(3);
-//     expect(coinCounterClosure2(92)("dimes")).toEqual(1);
-//     expect(coinCounterClosure2(92)("nickels")).toEqual(1);
-//     expect(coinCounterClosure2(92)("pennies")).toEqual(2);
-//   })
-// })
+describe('coinCounterClosure2', () => {
+  test('should correctly return number of quarters, dimes, nickels, and pennies for change', () => {
+    expect(coinCounterClosure2(91)("quarters")).toEqual(3);
+    expect(coinCounterClosure2(91)("dimes")).toEqual(1);
+    expect(coinCounterClosure2(91)("nickels")).toEqual(1);
+    expect(coinCounterClosure2(91)("pennies")).toEqual(1);
+  })
+})
