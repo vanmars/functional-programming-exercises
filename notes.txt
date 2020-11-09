@@ -1,4 +1,7 @@
-Roman Numerals
+**************
+ROMAN NUMERALS
+**************
+Goal: Fiven a number, wite a method to convert it to a roman numeral.
 
 Input (Number)   Output(String)
 621              "DCXXI"
@@ -8,3 +11,30 @@ Input (Number)   Output(String)
 * Depending on what place an integer is in, it will be handled differently
 * Need a function for ones, tens, hundreds, thousands
 * Will need conditional statements: If in thosands place, will run thousands function, and then will need to get rid of that thousands place digit and run the central function again, so input number needs to be made into an array so we can shift the digit we are working with before re-running the central function.
+
+
+*************
+PRIME SIFTING
+*************
+Goal: Given a number, write a method that returns all of the prime numbers less than that number.
+
+Input(Number)     Output(Array)
+14                [2,3,5,7,11,13]
+
+Sieve of Eratosthenes
+1. Create list of numbers 2 to number
+num = 14
+arr = [2,3,4,5,6,7,8,9,10,11,12,13]
+
+2. Let prime equal 2
+prime = 2
+
+3. Remove all multiples of prime from the list.
+while prime < num
+  for (let i=0; i<arr.length; i++){ if (arr[i]%prime === 0) arr.push[i]}
+
+4. Increment prime by 1
+prime += 1
+
+5. When prime = number, all the remaining numbers in the list are primes.
+return arr

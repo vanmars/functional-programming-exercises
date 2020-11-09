@@ -1,4 +1,4 @@
-import { getOnes, getTens, getHundreds, getThousands, getRoman, getRomanWithClosure } from '../src/js/romanNumerals.js'
+import { getOnes, getTens, getHundreds, getThousands, getRoman, getRomanWithClosure } from '../src/js/roman.js'
 
 describe('getOnes', () => {
 test('should return roman numeral given digit in ones place', () => {
