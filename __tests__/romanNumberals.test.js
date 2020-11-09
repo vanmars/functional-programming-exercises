@@ -6,21 +6,28 @@ test('should return roman numeral given digit in ones place', () => {
   })
 })
 
-describe('getTens', () =>{
+describe('getTens', () => {
 test('should return roman numeral given digit in tens place', () => {
     expect(getTens(6)).toEqual("LX");
   })
 
 })
 
-describe('getHundreds', () =>{
+describe('getHundreds', () => {
 test('should return roman numeral given digit in hundreds place', () => {
     expect(getHundreds(6)).toEqual("DC");
   })
 })
 
-describe('getThousands', () =>{
+describe('getThousands', () => {
 test('should return roman numeral given digit in thousands place', () => {
     expect(getThousands(3)).toEqual("MMM");
   })
 })
+
+describe('getRoman', () => {
+  test('should convert number to roman numberal', () => {
+      expect(getRoman(1234)).toEqual("MCCXXXIV");
+      expect(getRoman("1234")).toEqual("Please enter a number.");
+    })
+  })

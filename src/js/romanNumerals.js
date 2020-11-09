@@ -80,10 +80,25 @@ export const  getThousands = (num) => {
   }
 }
 
-export const getRoman = () => {
-
-
+export const getRoman = (num) => {                   // 1234                234             34           4       0
+  // Termination Case
+  if (typeof (num) !== 'number') {
+    return "Please enter a number."
+  }
+  const arr = num.toString().split("");              // ['1','2','3','4']   ['2','3','4']   ['3','4']   ['4']    ['0']
+  const workingDigit = parseInt(arr[0]);             // 1                   2               3            4       0       
+  const nextNum =  parseInt(arr.slice(1).join(""))   // 234                 34              4            NaN     NaN
+  // Base Case
+  if (num === 0) {
+    return ""
+  // Other Recursion Cases
+  } else if (arr.length === 4){
+    return getThousands(workingDigit) + getRoman(nextNum);  // "M" + getRoman(234)
+  } else if (arr.length === 3){
+    return getHundreds(workingDigit) + getRoman(nextNum);   // "CC" + getRoman(34)
+  } else if (arr.length === 2){
+    return getTens(workingDigit) + getRoman(nextNum);       // "XXX" + getRoman(4)
+  } else if (arr.length === 1){
+    return getOnes(workingDigit) + getRoman(0);             // "IV" + getRoman(0)
+  }
 }
-
-
-
