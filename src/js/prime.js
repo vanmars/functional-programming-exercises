@@ -18,7 +18,6 @@ export const getList = (num) => {
   const generateList = (number) => {
     list.unshift(number)
     if (number === 2){
-      console.log("List generated!")
       return;
     } else {
       return generateList(number-1);
@@ -26,4 +25,19 @@ export const getList = (num) => {
   }
   generateList(num-1);
   return list;
+}
+
+export const getPrimesRecursive = (num) => {
+  let arr = getList(num);
+  const filterArray = (number) => {
+    const prime = number;
+    arr = arr.filter(e => e % prime !== 0 || e === prime );
+    if (number === num-1) {
+      return;
+    } else {
+      return filterArray(number+1);
+    }
+  }
+  filterArray(2);
+  return arr;
 }
