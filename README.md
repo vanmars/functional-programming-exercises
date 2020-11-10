@@ -62,7 +62,6 @@ const prefixSir = addPrefix("Sir");
 #### Original Instructions for wb.Recursion1.js
 Write a recursive function that reverses the order of words in a sentence. For instance, "I am a cat" should become "cat a am I".
 
-
 ## Setup/Installation Requirements
 
 * Clone this project using the 'git clone' command in terminal while in directory where you would like to keep the project.
@@ -72,7 +71,7 @@ Write a recursive function that reverses the order of words in a sentence. For i
 
 ## Known Bugs
 
-_Can't seem to get my thrid coin funtion passing, but it works in the console._
+_There are no known bugs at this time._
 
 ## Support and contact details
 
