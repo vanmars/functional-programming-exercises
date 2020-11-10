@@ -34,3 +34,21 @@ WHITEBOARD PRACTICE: Closures
 *****************************
 Problem 1: Use a closure to create multiple functions for adding a prefix to a name. The prefix could be Doctor, Duchess, Sir, and so on. It should be possible to create a new prefix function like this: const prefixSir = addPrefix("Sir");
 
+
+*****************************
+WHITEBOARD PRACTICE: Recursion
+*****************************
+Problem 1: Write a recursive function that reverses the order of words in a sentence. For instance, "I am a cat" should become "cat a am I".
+
+Input(String)   OutOut(string)
+"I am a cat"    "cat a am I"
+
+1. Split string into an array
+[I, am, a cat]
+2. Reverse array
+[cat, a, am, I]
+3. Join array back into a string
+"cat a am I"
+
+Recursion
+1. Grab the last item and go back to function
