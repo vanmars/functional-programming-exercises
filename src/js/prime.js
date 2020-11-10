@@ -12,7 +12,7 @@ export const getPrimes = (num) => {
   return arr;
 }
 
-// Recursive Solution
+// Recursive Solution - Two Ways
 export const getList = (num) => {
   let list = [];
   const generateList = (number) => {
@@ -40,4 +40,12 @@ export const getPrimesRecursive = (num) => {
   }
   filterArray(2);
   return arr;
+}
+
+export const getList2 = (num) => {
+  if (num === 3){
+    return [2];
+  } else {
+    return getList2(num-1).concat([num-1]);
+  }
 }
