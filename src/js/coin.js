@@ -1,3 +1,4 @@
+// Solution with Recursion
 export const coinCounterRecursion = (num) => {
   if (isNaN(num)) {
     return "Please enter a number."
@@ -19,6 +20,7 @@ export const coinCounterRecursion = (num) => {
   };
 }
 
+// Two Solutions - Both Using Closures (First returns string listing all coins; second allows you to specify which type of coin you want to see the change for.)
 export const coinCounterClosure1 = (num) => {
   const quarters =  Math.floor(num/25);
   const dimes = Math.floor((num - quarters*25)/10);
