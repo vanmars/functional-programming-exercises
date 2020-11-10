@@ -23,18 +23,14 @@ Input(Number)     Output(Array)
 
 Sieve of Eratosthenes
 1. Create list of numbers 2 to number
-num = 14
-arr = [2,3,4,5,6,7,8,9,10,11,12,13]
-
 2. Let prime equal 2
-prime = 2
-
 3. Remove all multiples of prime from the list.
-while prime < num
-  for (let i=0; i<arr.length; i++){ if (arr[i]%prime === 0) arr.push[i]}
-
 4. Increment prime by 1
-prime += 1
-
 5. When prime = number, all the remaining numbers in the list are primes.
-return arr
+
+
+*****************************
+WHITEBOARD PRACTICE: Closures
+*****************************
+Problem 1: Use a closure to create multiple functions for adding a prefix to a name. The prefix could be Doctor, Duchess, Sir, and so on. It should be possible to create a new prefix function like this: const prefixSir = addPrefix("Sir");
+
